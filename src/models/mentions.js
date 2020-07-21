@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
+
 const schema = new Schema({
   friend: {
     type: String,
@@ -12,5 +13,6 @@ const schema = new Schema({
     required: true
   }
 });
+
 
 module.exports = mongoose.model('Mentions', schema);
