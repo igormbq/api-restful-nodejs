@@ -11,11 +11,17 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "axios": "^0.19.2",
     "debug": "^4.1.1",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
+    "http": "0.0.1-security",
     "mongoose": "^5.9.25",
-    "nodemon": "^1.10.2"
+    "nodemon": "^1.10.2",
+    "pipedrive": "^10.4.3",
+    "query-string": "^6.13.1",
+    "request": "^2.88.2",
+    "soap": "^0.32.0"
   },
   "devDependencies": {}
 }
