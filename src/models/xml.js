@@ -6,10 +6,10 @@ module.exports = class Xml {
         this.qtde = qtde;
         this.vlr_unit = vlr/qtde;
         this.vlr = vlr;
-        this.data = data;
+        this.data = "24/07/2020";
     }
 
-    getXmlModel(){
+    dealXmlModel(){
         var xml = '<?xml version="1.0" encoding="UTF-8"?>'
         +'<pedido>'
         + '<data>22/07/2020</data>'

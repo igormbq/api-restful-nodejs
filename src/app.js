@@ -47,11 +47,11 @@ const Deal = require('./models/deal');
 const indexRoutes = require('./routes/index-routes');
 app.use('/', indexRoutes);
 
-const dealsRoutes = require('./routes/deal-routes');
-app.use('/deal', dealsRoutes);
+const dealRoutes = require('./routes/deal-routes');
+app.use('/v1/deal', dealRoutes);
 
-// TEST API
-const pipeRoutes = require('./services/api-pipedrive');
-app.use('/pipe', pipeRoutes);
+ // TEST API
+const pipeRoutes = require('./services/service');
+app.use('/v1/pipedrive', pipeRoutes); 
 
 module.exports = app;

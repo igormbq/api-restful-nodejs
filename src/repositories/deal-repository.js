@@ -2,14 +2,14 @@ const mongoose = require('mongoose');
 const Deal = mongoose.model('Deal');
 
 
-exports.listDeals = async () => {
-    const res = await Deal.find({}, 'friend mention -_id');
-    return res;
-};
-
 exports.createDeals = async data => {
     const deal = new Deal(data);
     await deal.save();
+};
+
+exports.listDeals = async () => {
+    const res = await Deal.find({}, 'friend mention -_id');
+    return res;
 };
 
 exports.updateMention = async (id, data) => {

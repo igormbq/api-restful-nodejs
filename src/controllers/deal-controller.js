@@ -5,8 +5,7 @@ const repository = require('../repositories/deal-repository');
 exports.createDeal = async (req, res) => {
   try {
     await repository.createDeal({
-      friend: req.body.friend,
-      Deal: req.body.Deal
+      deal: req.body.deal,
     });
     res.status(201).send({ message: 'Success, created Deal!' });
   } catch (e) {
