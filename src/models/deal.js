@@ -3,11 +3,10 @@ const Schema = mongoose.Schema;
 
 
 const schema = new Schema({
-  deal: {
-    type: String,
-    required: true,
+  deal: String,
+  value: Number,
+  date: Date,
   }
-});
-
+);
 
 module.exports = mongoose.model('Deal', schema);

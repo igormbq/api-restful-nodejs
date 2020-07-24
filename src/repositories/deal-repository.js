@@ -1,18 +1,17 @@
 const mongoose = require('mongoose');
 const Deal = mongoose.model('Deal');
 
-
-exports.createDeals = async data => {
+exports.createDeal = async data => {
     const deal = new Deal(data);
     await deal.save();
 };
 
-exports.listDeals = async () => {
-    const res = await Deal.find({}, 'friend mention -_id');
+exports.listDeal = async () => {
+    const res = await Deal.find({},'deal');
     return res;
 };
 
-exports.updateMention = async (id, data) => {
+exports.updateDeal = async (id, data) => {
     await Deal.findByIdAndUpdate(id, {
         $set: data
     });
