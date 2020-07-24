@@ -8,7 +8,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "",
+  "author": "Igor Matheus B.Q",
   "license": "ISC",
   "dependencies": {
     "axios": "^0.19.2",
@@ -16,12 +16,12 @@
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "http": "0.0.1-security",
+    "moment": "^2.27.0",
     "mongoose": "^5.9.25",
     "nodemon": "^1.10.2",
     "pipedrive": "^10.4.3",
     "query-string": "^6.13.1",
-    "request": "^2.88.2",
-    "soap": "^0.32.0"
+    "request": "^2.88.2"
   },
   "devDependencies": {}
 }

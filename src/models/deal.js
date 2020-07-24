@@ -15,4 +15,4 @@ const schema = new Schema({
 });
 
 
-module.exports = mongoose.model('Mentions', schema);
+module.exports = mongoose.model('Deal', schema);
