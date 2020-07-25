@@ -49,7 +49,7 @@ app.use('/', indexRoutes);
 const dealRoutes = require('./routes/deal-routes');
 app.use('/v1/deal', dealRoutes);
 
- // TEST API
+ // Get deals from pipedrive
 const pipeRoutes = require('./services/service');
 app.use('/v1/pipedrive', pipeRoutes); 
 

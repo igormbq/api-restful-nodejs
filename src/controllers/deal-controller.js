@@ -4,8 +4,8 @@ const repository = require('../repositories/deal-repository');
 // list
 exports.listDeal = async (req, res) => {
   try {
-    await repository.listDeal();
-    res.status(200).send({ message: 'Success, to list Deals!' });
+    const data = await repository.listDeal();
+    res.status(200).send(data);
   } catch (e) {
     res.status(500).send({ message: 'Failed to list Deals!' });
   }
@@ -50,14 +50,12 @@ exports.deleteDeal = async (req, res) => {
   }
 };
 
-// delete
+// aggregate
 exports.aggregateDeal = async (req, res) => {
   try {
-    await repository.aggregateDeal();
-    res.status(200).send({
-      message: 'Success, aggregate Deal!'
-    });
+    const data = await repository.aggregateDeal();
+    res.status(200).send(data);
   } catch (e) {
-    res.status(500).send({ message: 'Failed to remove Deal.' });
+    res.status(500).send({ message: 'Failed to load Agregate Deal.' });
   }
 };
