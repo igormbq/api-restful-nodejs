@@ -49,3 +49,15 @@ exports.deleteDeal = async (req, res) => {
     res.status(500).send({ message: 'Failed to remove Deal.' });
   }
 };
+
+// delete
+exports.aggregateDeal = async (req, res) => {
+  try {
+    await repository.aggregateDeal();
+    res.status(200).send({
+      message: 'Success, aggregate Deal!'
+    });
+  } catch (e) {
+    res.status(500).send({ message: 'Failed to remove Deal.' });
+  }
+};

@@ -20,3 +20,30 @@ exports.updateDeal = async (id, data) => {
 exports.deleteDeal = async id => {
     await Deal.findByIdAndDelete(id);
 };
+
+exports.aggregateDeal = async () => {
+    const res = await Deal.aggregate([
+       // { $match: { date: { $gte: ISODate('2020-07-20')} } },
+        { $group : {
+            //_id : { date : "$date" },
+            _id : { $dateToString: { format: "%Y-%m-%d", date: "$date" } },
+            amount: { $sum: "$value" }
+          }},        { $sort: { value: -1 } }
+        ]);
+    console.log(res)
+    return res;
+};
+
+
+/* exports.aggregateDeal = async () => {
+    const res = await Deal.aggregate([
+        { $match: { date: { $gte: ISODate('2020-07-20')} } },
+        { aDate: { $lt: ISODate('2012-05-01') } },
+        { $group: {_id : { $dateToString: { format: "%Y-%m-%d", date: "$date" } }, amount: { $sum: "$value" } } },
+        { $sort: { value: -1 } }
+      ]);
+    console.log(res)
+    return res;
+};
+
+_id : { date : "$date" } */

@@ -6,13 +6,16 @@ module.exports = class Xml {
         this.qtde = qtde;
         this.vlr_unit = vlr/qtde;
         this.vlr = vlr;
-        this.data = "24/07/2020";
+        this.data = dateFormat(data);
     }
 
+    // This method changes the date to the Utc format, we need to do it, to be compatible with the BLING platform
+    
+    // It's a basic xml model with mandatory fields to send data to the BLING plataform
     dealXmlModel(){
         var xml = '<?xml version="1.0" encoding="UTF-8"?>'
         +'<pedido>'
-        + '<data>22/07/2020</data>'
+        + '<data>' + this.data + '</data>'
         + '<cliente>'
         + '<nome>' + this.nome + '</nome>'
         + '</cliente>'
@@ -31,7 +34,12 @@ module.exports = class Xml {
         + '</parcelas>'
         +'</pedido>';
 
-        //URL ENCODE - REQUIRED FORMAT FOR POST REQUEST
+        //Url Econde - Required format for POST request
         return encodeURIComponent(xml);
     }
+}
+
+function dateFormat(data){
+    var date = new Date(data);
+    return dateUtc = ((date.getUTCDate()+1) +'/'+ (date.getUTCMonth()+1) +'/'+ date.getFullYear());
 }
