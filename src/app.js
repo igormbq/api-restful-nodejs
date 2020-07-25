@@ -39,6 +39,9 @@ process.on('SIGINT', () => {
     });
 });
 
+// Load models
+const Deal = require('./models/deal');
+
 // Load routes
 const indexRoutes = require('./routes/index-routes');
 app.use('/', indexRoutes);

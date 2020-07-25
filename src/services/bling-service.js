@@ -5,7 +5,7 @@ require('dotenv').config();
 
 exports.createSalesOrder = async function(myMap) { 
 	var request = require('request');
-	const xmlData = new Xml(myMap.get("nome"), myMap.get("codigo"), myMap.get("qtde"), myMap.get("vlr"), myMap.get("data"));
+	const xmlData = new Xml(myMap.get("nome"), myMap.get("codigo"), myMap.get("descricao"), myMap.get("qtde"), myMap.get("vlr"), myMap.get("data"));
 
 	var xml = await xmlData.dealXmlModel();
 	var form = {
@@ -15,7 +15,6 @@ exports.createSalesOrder = async function(myMap) {
 
 	request.post('https://bling.com.br/Api/v2/pedido/json/', { form }
 	,function(err, res) {
-		console.log("RES")
 		return res.body
 	}); 
 }
