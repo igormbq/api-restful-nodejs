@@ -40,5 +40,5 @@ module.exports = class Xml {
 // This method changes the date to the Utc format, we need to do it, to be compatible with the BLING platform
 function dateFormat(data){
     var date = new Date(data);
-    return dateUtc = ((date.getUTCDate()+1) +'/'+ (date.getUTCMonth()+1) +'/'+ date.getFullYear());
+    return dateUtc = (date.getUTCDate() +'/'+ (date.getUTCMonth()+1) +'/'+ date.getFullYear());
 }

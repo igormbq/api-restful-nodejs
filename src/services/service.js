@@ -4,33 +4,33 @@ const blingService = require('./bling-service.js');
 
 const app = express();
 
-
 require('dotenv').config();
 
 
+// ADVISE : That's a test application, if you are on production environment 
+// you must use Webhooks for a better perfomance(see the pipedrive documentation).
 app.get('/', async (req, res) => {
     try {
-        var deals = await pipedriveService.getDeals();
+		// This method get all deals with status equals "Won" from PIPEDRIVE
+		var deals = await pipedriveService.getDeals("Won");
+		
 		if (deals.data && deals.data.length > 0) {
 			deals.data.forEach(deal => {
-				var kvArray = [
-					["nome", deal.person_name], 
-					["codigo", deal.codigo],
-					["descricao", deal.title],
-					["qtde", deal.products_count],
-					["vlr", deal.weighted_value],
-					["data", deal.won_time],
-				];
 				
-				var myMap = new Map(kvArray);
+				// Deal data to make Sales Order and Collection data 
+				var myMap = new Map();
+				myMap.set("nome", deal.person_name);
+				myMap.set("codigo", deal.codigo);
+				myMap.set("descricao", deal.title);
+				myMap.set("vlr", deal.weighted_value);
+				myMap.set("data", deal.won_time);
 				
+				//Make a Sales Order on BLING
 			 	blingService.createSalesOrder(myMap).then( res => {
 					console.log(res)
 				}).catch( err => {
 					console.log('there was an error:', err); 
 				});
-				//BLING constructor(nome cliente, codigo produt, descricao produt, qtde, vlw_unit, vlr, data) {
-				console.log(deal.person_name, 22, 10, deal.title, deal.products_count, deal.weighted_value, deal.won_time);
 			});
 		} else {
 			console.log('No deals found on your account.');
