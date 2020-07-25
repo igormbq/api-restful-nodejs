@@ -1,6 +1,7 @@
 const express = require('express');
 const pipedriveService = require('./pipedrive-service.js');
 const blingService = require('./bling-service.js');
+const dealRepository = require('../repositories/deal-repository');
 
 const app = express();
 
@@ -17,7 +18,7 @@ app.get('/', async (req, res) => {
 		if (deals.data && deals.data.length > 0) {
 			deals.data.forEach(deal => {
 				
-				// Deal data to make Sales Order and Collection data 
+				// Deal data to make Sales Order
 				var myMap = new Map();
 				myMap.set("nome", deal.person_name);
 				myMap.set("codigo", deal.codigo);
@@ -27,7 +28,21 @@ app.get('/', async (req, res) => {
 				
 				//Make a Sales Order on BLING
 			 	blingService.createSalesOrder(myMap).then( res => {
-					console.log(res)
+					console.log(res);
+				}).catch( err => {
+					console.log('there was an error:', err); 
+				});
+
+				// Deal json format to make a Collection data 
+				var myCollection = {
+					"deal": deal.person_name, 
+					"value": deal.weighted_value,
+					"date": deal.won_time 
+				}
+
+				//Make Collection on AtlasDB
+				dealRepository.createDeal(myCollection).then( res => {
+					console.log(res);
 				}).catch( err => {
 					console.log('there was an error:', err); 
 				});
