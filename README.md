@@ -7,7 +7,7 @@
 <li class="has-line-data" data-line-start="7" data-line-end="8">Find all Deals on the Atlas</li>
 <li class="has-line-data" data-line-start="8" data-line-end="9">Get alll Deals  on the atlasDB group by date and amount</li>
 </ul>
-</br></br></br>
+</br></br>
 <h2><pre><code>                                     API REFERENCE   
 </code></pre></h2>
 
