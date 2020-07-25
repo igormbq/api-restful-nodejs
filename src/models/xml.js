@@ -8,8 +8,6 @@ module.exports = class Xml {
         this.vlr = vlr;
         this.data = dateFormat(data);
     }
-
-    // This method changes the date to the Utc format, we need to do it, to be compatible with the BLING platform
     
     // It's a basic xml model with mandatory fields to send data to the BLING plataform
     dealXmlModel(){
@@ -39,6 +37,7 @@ module.exports = class Xml {
     }
 }
 
+// This method changes the date to the Utc format, we need to do it, to be compatible with the BLING platform
 function dateFormat(data){
     var date = new Date(data);
     return dateUtc = ((date.getUTCDate()+1) +'/'+ (date.getUTCMonth()+1) +'/'+ date.getFullYear());
