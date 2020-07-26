@@ -16,7 +16,8 @@
 <b>GET</b>      /v1/pipedrive   =  Get all Deals(Status = “Won”) from Pipedrive and create data on Bling and AtlasDB.<br>
 <b>GET</b>     /v1/deal         = Find all Deals from AtlasDB .<br>
 <b>GET</b>     /v1/aggregate    = Find All Deals from AtlasDB aggregate group by Date and Amount</p>
-<h1 class="code-line" data-line-start=23 data-line-end=24 ><a id="New_Features_23"></a>New Features!</h1>
+<h1 class="code-line" data-line-start=23 data-line-end=24 ><a id="New_Features_23"></a>
+Future implementations!</h1>
 <ul>
 <li class="has-line-data" data-line-start="25" data-line-end="26">Add more filters and pagination</li>
 <li class="has-line-data" data-line-start="26" data-line-end="27">Clear code</li>
