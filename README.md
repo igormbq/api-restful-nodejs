@@ -29,7 +29,7 @@ Future implementations!</h1>
 <p class="has-line-data" data-line-start="33" data-line-end="36">-&gt; This project requires <a href="https://nodejs.org/">Node.js</a> v4+ to run;<br>
 -&gt;1- Download it on your computer;<br>
 -&gt;2- Into yours folder run:in command line this: npm install<br>
--&gt;3- Command to start the application: npm run dev
+-&gt;3- Command to start the application: npm run dev<br>
 -&gt;4- Changing tokens from the dotenv file (you need to have a pipedrive, bling and atlasdb account, it's very easy to create, see the documentation)</p>
 
 
