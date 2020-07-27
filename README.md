@@ -28,6 +28,7 @@ Future implementations!</h1>
 <h3 class="code-line" data-line-start=31 data-line-end=32 ><a id="Installation_31"></a>Installation</h3>
 <p class="has-line-data" data-line-start="33" data-line-end="36">-&gt; This project requires <a href="https://nodejs.org/">Node.js</a> v4+ to run;<br>
 -&gt;1- Download it on your computer;<br>
--&gt;2- Into yours folder run:in command line this: npm install</p><br>
+-&gt;2- Into yours folder run:in command line this: npm install<br>
 -&gt;3- Command to start the application: npm run dev</p>
+
 <p class="has-line-data" data-line-start="37" data-line-end="38">[in construction]</p>
