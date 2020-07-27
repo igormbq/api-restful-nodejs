@@ -13,7 +13,7 @@
 
 
 <p class="has-line-data" data-line-start="17" data-line-end="21">Ex: Type -       Path                 - Result<br>
-<p><img alt="Custom badge" src="https://img.shields.io/badge/GET-%2Fv1%2Fpipedrive-green?style=for-the-square"> Get all Deals(Status = “Won”) from Pipedrive and create data on Bling and AtlasDB.<br>
+<p><img alt="Custom badge" src="https://img.shields.io/badge/GET-%2Fv1%2Fpipedrive-green?style=for-the-square"> = Get all Deals(Status = “Won”) from Pipedrive and create data on Bling and AtlasDB.<br>
 <p><img alt="Custom badge" src="https://img.shields.io/badge/GET-%2Fv1%2Fdeal-green?style=for-the-square">= Find all Deals from AtlasDB .<br>
 <p><img alt="Custom badge" src="https://img.shields.io/badge/GET-%2Fv1%2Faggregate-green?style=for-the-square">= Find All Deals from AtlasDB aggregate group by Date and Amount</p>
 <h1 class="code-line" data-line-start=23 data-line-end=24 ><a id="New_Features_23"></a>
@@ -29,6 +29,8 @@ Future implementations!</h1>
 <p class="has-line-data" data-line-start="33" data-line-end="36">-&gt; This project requires <a href="https://nodejs.org/">Node.js</a> v4+ to run;<br>
 -&gt;1- Download it on your computer;<br>
 -&gt;2- Into yours folder run:in command line this: npm install<br>
--&gt;3- Command to start the application: npm run dev</p>
+-&gt;3- Command to start the application: npm run dev
+-&gt;4- Changing tokens from the dotenv file (you need to have a pipedrive, bling and atlasdb account, it's very easy to create, see the documentation)</p>
+
 
 <p class="has-line-data" data-line-start="37" data-line-end="38">[in construction]</p>
