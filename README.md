@@ -1,5 +1,5 @@
 <h1 class="code-line" data-line-start=0 data-line-end=1 ><a id="API_RESTful_with_NodeJS_0"></a>API RESTful with NodeJS</h1>
-<p class="has-line-data" data-line-start="2" data-line-end="3">In this project, we will build an API that integrates with Pipedrive (CRM), Bling (ERP) and AtlasDB (Cloud Database).</p>
+<p class="has-line-data" data-line-start="2" data-line-end="3">In this project, we will build an API that integrates with Pipedrive (CRM), Bling (ERP) and AtlasDB (Cloud Database).The following functions have already been implemented: </p>
 <ul>
 <li class="has-line-data" data-line-start="4" data-line-end="5">Get all deals that have status equals “Won”</li>
 <li class="has-line-data" data-line-start="5" data-line-end="6">Create Deals on the Bling Plataform</li>
