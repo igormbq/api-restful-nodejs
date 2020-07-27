@@ -13,7 +13,7 @@
 
 
 <p class="has-line-data" data-line-start="17" data-line-end="21">Ex: Type -       Path                 - Result<br>
-<b>GET</b>      /v1/pipedrive   =  Get all Deals(Status = “Won”) from Pipedrive and create data on Bling and AtlasDB.<br>
+<b>https://img.shields.io/badge/GET-%2Fv1%2Fpipedrive-green?style=for-the-badge   =  Get all Deals(Status = “Won”) from Pipedrive and create data on Bling and AtlasDB.<br>
 <b>GET</b>     /v1/deal         = Find all Deals from AtlasDB .<br>
 <b>GET</b>     /v1/aggregate    = Find All Deals from AtlasDB aggregate group by Date and Amount</p>
 <h1 class="code-line" data-line-start=23 data-line-end=24 ><a id="New_Features_23"></a>
