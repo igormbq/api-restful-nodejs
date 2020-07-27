@@ -13,7 +13,7 @@
 
 
 <p class="has-line-data" data-line-start="17" data-line-end="21">Ex: Type -       Path                 - Result<br>
-<b>https://img.shields.io/badge/GET-%2Fv1%2Fpipedrive-green?style=for-the-badge   =  Get all Deals(Status = “Won”) from Pipedrive and create data on Bling and AtlasDB.<br>
+<b><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="178.5" height="28" role="img" aria-label="GET: /V1/PIPEDRIVE"><title>GET: /V1/PIPEDRIVE</title><g shape-rendering="crispEdges"><rect width="47.5" height="28" fill="#555"/><rect x="47.5" width="131" height="28" fill="#97ca00"/></g><g fill="#fff" text-anchor="middle" font-family="Verdana,Geneva,DejaVu Sans,sans-serif" text-rendering="geometricPrecision" font-size="100"><text fill="#fff" x="237.5" y="175" transform="scale(.1)" textLength="235">GET</text><text fill="#fff" x="1130" y="175" font-weight="bold" transform="scale(.1)" textLength="1070">/V1/PIPEDRIVE</text></g></svg>   =  Get all Deals(Status = “Won”) from Pipedrive and create data on Bling and AtlasDB.<br>
 <b>GET</b>     /v1/deal         = Find all Deals from AtlasDB .<br>
 <b>GET</b>     /v1/aggregate    = Find All Deals from AtlasDB aggregate group by Date and Amount</p>
 <h1 class="code-line" data-line-start=23 data-line-end=24 ><a id="New_Features_23"></a>
