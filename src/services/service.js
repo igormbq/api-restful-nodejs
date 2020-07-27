@@ -21,11 +21,11 @@ app.get('/', async (req, res) => {
 				// Deal data to make Sales Order
 				var myMap = new Map();
 				myMap.set("nome", deal.person_name);
-				myMap.set("codigo", deal.codigo);
+				myMap.set("codigo", deal.id);
 				myMap.set("descricao", deal.title);
 				myMap.set("vlr", deal.weighted_value);
 				myMap.set("data", deal.won_time);
-				
+
 				//Make a Sales Order on BLING
 			 	blingService.createSalesOrder(myMap).then( res => {
 					console.log(res);
@@ -37,7 +37,8 @@ app.get('/', async (req, res) => {
 				var myCollection = {
 					"deal": deal.person_name, 
 					"value": deal.weighted_value,
-					"date": deal.won_time 
+					"date": deal.won_time,
+					"id_bling": deal.id,
 				}
 
 				//Make Collection on AtlasDB
@@ -53,6 +54,7 @@ app.get('/', async (req, res) => {
 	} catch (error) {
 		console.log(error);
 	}
+	res.end();
 });
 
 

@@ -28,7 +28,6 @@ exports.createDeal = async (req, res) => {
 // update
 exports.updateDeal = async (req, res) => {
   try {
-    console.log("ARRIVED");
     await repository.updateDeal(req.params.id, req.body);
     res.status(200).send({
       message: 'Success, updated Deal!'

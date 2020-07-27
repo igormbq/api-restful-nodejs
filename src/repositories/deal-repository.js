@@ -22,7 +22,6 @@ exports.deleteDeal = async id => {
 };
 
 exports.aggregateDeal = async () => {
-    console.log("aquiii")
     const res = await Deal.aggregate([
        // { $match: { date: { $gte: ISODate('2020-07-20')} } },
         { $group : {
